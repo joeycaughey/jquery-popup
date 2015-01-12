@@ -1,0 +1,191 @@
+
+
+
+.toggle-hidden {
+	display: none;
+}
+
+div#popup {
+	background: #fff;
+	color: #333;
+	padding: 30px;
+	position: absolute;
+	z-index: 4001; 
+	opacity: 1;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+}
+
+#popup div.scrollarea {
+	overflow-y: auto;	
+}
+
+#popup h2 {
+	margin-top: 0;
+	padding-top: 0;	
+}
+
+#popup a#popup_close {
+	top: 5px;
+	right: 5px;
+	position: absolute;
+	background: url('close_icon_circle.png') no-repeat;
+	width: 22px;
+	height: 22px;
+	z-index: 9999; 
+}
+
+#popup a#popup_close:hover {
+	opacity: 0.7;
+	cursor: pointer;	
+}
+
+#blockout {
+	position: fixed;
+	background: #000 !important;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#blockout-content {
+    width: 100%;
+    height: 100%;	
+    z-index: 500; 
+    background: #fff;
+  
+    margin: auto;
+    min-height: 2000px;
+    
+}
+
+
+div#popup {
+	font-size: 14px;
+	line-height: 20px;
+	color: #aaa;
+}
+
+#popup h1 {
+	font-size: 24px;
+	color: #fbb415;	
+}
+
+#popup h2 {
+	color: #33CAAF;
+	font-size: 22px;	
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #eee;
+	margin-bottom: 10px;
+}
+
+#popup p.first {
+	margin-top: 0;
+	padding-top: 0;	
+}
+
+
+/* Popup Form Styles */
+
+#popup form.full {
+	padding-left: 0;
+}
+
+#popup form fieldset > span,
+#popup form input[type=text], 
+#popup form input[type=password],
+#popup form input[type=file], 
+#popup form label, 
+#popup form textarea {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+
+#popup form fieldset > span.checkbox input[type=text] {
+	margin-top: -10px;
+}
+
+#popup form fieldset > span.checkbox input[size=5] {
+	width: 75px;
+}
+
+#popup form fieldset input,
+#popup form fieldset textarea {
+	background: #eee !important;
+	color: #333 !important;
+}
+
+#popup form input[type=text].error,
+#popup form textarea.error {
+	border: solid 3px #cc0000;
+}
+
+
+#popup form fieldset > span > label {
+	
+	padding: 0;
+	margin: 0;
+}
+
+#popup form fieldset span.checkbox {
+	
+}
+
+#popup form fieldset span.checkbox input[type=checkbox] {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+#popup p.skip {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+
+#popup p.skip a {
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	background: #27637d;
+	color: #fff;
+}
+
+#popup p.skip a:hover {
+	opacity: 0.7;
+}
+
+
+.percent-25 {
+	width: 24% !important;
+	margin-right: 1%;
+}
+
+.percent-50 {
+	width: 49% !important;
+	margin-right: 1%;
+}
+
+.percent-75 {
+	width: 74% !important;
+	margin-right: 1%;
+}
+
+.percent-60 {
+	width: 60% !important;
+	margin-right: 1%;
+}
+
+.full {
+	width: 100% !important;
+}
