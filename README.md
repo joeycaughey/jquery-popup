@@ -12,12 +12,15 @@ Load a popup URL.
 Popup.init({
   width: 300,
   height : 400,
-  variables : {},
+  variables : {
+    // Variables can be passed into the popup on initilization.
+  },
   url : 'popup.html',
   nopadding: (true/false),
   fullscreen: (true/false),
   callback: function() {
-    // 
+    // Callback functionality to alter the parent that 
+    // is called using Popup.callback({});
   }
   
 });
