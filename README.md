@@ -42,6 +42,7 @@ Popup.alert({
 Calling the Callback
 ```
 Popup.callback({});
+```
 
 Reset the position of the popup.
 ```
