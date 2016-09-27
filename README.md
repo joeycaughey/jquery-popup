@@ -8,7 +8,7 @@ USAGE AND INITIALIZATION
 ----------------------------------------------------
 
 Load a popup URL.
-```
+```javascript
 Popup.init({
   width: 300,
   height : 400,
@@ -27,7 +27,7 @@ Popup.init({
 ```
 
 Loading HTML content.
-```
+```javascript
 Popup.init({
   width: 300,
   height : 400,
@@ -43,16 +43,16 @@ Popup.alert({
 ```
 
 Calling the Callback
-```
+```javascript
 Popup.callback({});
 ```
 
 Reset the position of the popup.
-```
+```javascript
 Popup.position();
 ```
 
 Close the popup.
-```
+```javascript
 Popup.close();
 ```
