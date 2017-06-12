@@ -21,20 +21,15 @@ var Popup = {
 
         self.options = options;
 
-
         // Calculations
         screen_width = $(window).width();
         screen_height = $(window).height();
-        offset_x = (screen_width / 2) - (options.width / 2);
-        offset_y = (screen_height / 2) - (options.height / 2);
-        top_offset = $(window).scrollTop();
+ 
 
         // Create Popup
         self.assets.popup = $('<div id="popup" style="display: none;"></div>')
             .width(options.width)
             .css("min-height", options.height)
-            .css("marginLeft", offset_x - 30)
-            .css("marginTop", top_offset + offset_y - 60);
 
         // Disable Page Scrolling
         $('html, body').css({
@@ -83,6 +78,7 @@ var Popup = {
             .html(popup_html)
             .append(close_button);
 
+
         $("#popup").html(self.assets.popup.html());
 
         if (self.options.nopadding) {
@@ -111,8 +107,8 @@ var Popup = {
 
         // Internalize Links
         thisform.find("a").on("click", function(e) {
-            e.preventDefault();
             if (!$(this).hasClass("external")) {
+                 e.preventDefault();
                 $.get($(this).attr("href"), function(html) {
                     self.build(html);
                 });
@@ -131,7 +127,6 @@ var Popup = {
     },
     blockout: function() {
         var self = this;
-        $("#popup").remove();
         $("#blockout").remove();
 
         var blockout = $('<div id="blockout" style="display: none;"></div>')
@@ -140,11 +135,12 @@ var Popup = {
             .css("z-index", 4000)
             .show();
 
-        $("body").prepend(blockout);
         $("body").prepend(
-            self.assets.popup.fadeIn(400, function() {
-                $(this).show();
-            })
+            blockout.append(
+                self.assets.popup.fadeIn(400, function() {
+                    $(this).show();
+                })
+            )
         );
 
         $(document).keyup(function(e) {
@@ -159,36 +155,8 @@ var Popup = {
             self.position();
         })
     },
-    position: function() {
-        screen_width = $(window).width();
-        screen_height = $(window).height();
-
-        if (options === undefined) {
-            var options = {
-                    width: $("#popup").width(),
-                    height: $("#popup").height()
-                }
-                //alert(options.height);
-        }
-
-
-        offset_x = (screen_width / 2) - (options.width / 2);
-        offset_y = (screen_height / 2) - (options.height / 2);
-
-        top_offset = $(window).scrollTop();
-
-
-        $("#popup").css("marginLeft", offset_x);
-        $("#popup").css("marginTop", top_offset + offset_y - 30);
-    },
-    resize: function() {
-        var self = this;
-        //self.blockout();
-        self.position($("#popup").width(), $("#popup").height());
-    },
     close: function() {
         $("#blockout, #popup").fadeOut(200);
-        $("#popup").remove();
         $("#blockout").remove();
         $("body").css("overflow", "visible");
 
@@ -217,6 +185,5 @@ var Popup = {
 $(window).on("resize", function() {
     if ($("#popup").length != 0) {
         $("#blockout").width("100%").height("100%");
-        Popup.position();
     }
 });
