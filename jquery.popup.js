@@ -108,7 +108,7 @@ var Popup = {
         // Internalize Links
         thisform.find("a").on("click", function(e) {
             if (!$(this).hasClass("external")) {
-                 e.preventDefault();
+                e.preventDefault();
                 $.get($(this).attr("href"), function(html) {
                     self.build(html);
                 });
@@ -150,10 +150,6 @@ var Popup = {
                 self.close();
             }
         });
-
-        $(window).resize(function() {
-            self.position();
-        })
     },
     close: function() {
         $("#blockout, #popup").fadeOut(200);
