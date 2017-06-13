@@ -32,7 +32,7 @@ var Popup = {
             .css("min-height", options.height)
 
         // Disable Page Scrolling
-        $('html, body').css({
+        $('html').css({
             'overflow': 'hidden',
             'height': '100%'
         });
@@ -157,7 +157,7 @@ var Popup = {
         $("body").css("overflow", "visible");
 
         // re-Enable page Scrolling
-        $('html, body').css({
+        $('html').css({
             'overflow': 'auto',
             'height': 'auto'
         });
