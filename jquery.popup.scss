@@ -7,12 +7,11 @@
 
 #blockout {
     position: fixed;
-    background: #000;
-    opacity: 0.7;
+    background: rgba(0,0,0,0.7);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
 }
 
 div#popup {
@@ -41,6 +40,7 @@ div#popup {
         border-radius: 0px;
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
+         border-radius: 0px;
         padding: 20px;
     }
     &:not(.fullscreen) {
@@ -138,20 +138,23 @@ div#popup {
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 780px) {
-    #popup {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    div#popup {
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
+        bottom: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        padding: 10% !important;
-        margin: 0 !important;
+        padding: 30px;
+        margin: 0;
         font-size: 12px;
-        border-radius: 0px !important;
-        -moz-border-radius: 0px !important;
-        overflow: auto;
-        position: fixed !important;
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+       
+        transform: none !important;
+        overflow-y: auto;
         div.column {
             margin-top: 20px;
         }
