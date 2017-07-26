@@ -85,42 +85,7 @@ div#popup {
         margin-top: 0;
         padding-top: 0;
     }
-    form.full {
-        padding-left: 0;
-    }
-    form {
-        fieldset {
-            legend {
-                color: #333 !important;
-            }
-            label {
-                color: #333 !important;
-            }
-            input {
-                background: #eee;
-                color: #333;
-            }
-            textarea {
-                background: #eee;
-                color: #333;
-                width: 98%;
-            }
-            input[type=text] {
-                width: 100%;
-            }
-            input[type=password] {
-                width: 100%;
-            }
-            ol {
-                li.checkbox {
-                    padding-left: 25px;
-                    input[type=checkbox] {
-                        margin-left: -25px;
-                    }
-                }
-            }
-        }
-    }
+
     p.skip {
         position: absolute;
         right: 20px;
